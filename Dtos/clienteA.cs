@@ -37,5 +37,9 @@ namespace ClientesNuevosC_.Dtos
             this.fchAltaCliente = fchAltaCliente;
             this.fchBajaCliente = fchBajaCliente;
         }
+        public string tostring()
+        {
+            string objstring = "   " + this.nombreCliente + "   " + this.apellidoCliente + "   " + this.dni + "   " + this.fechaNaciomientoCliente + this.emailCliente + this.
+        }
     }
 }
