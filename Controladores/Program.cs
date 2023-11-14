@@ -28,6 +28,7 @@ namespace ClientesNuevosC_
                         cerrarMenu = true;  
                         break;
                     case 1:
+                        listadto.Add();
                         
 
 
