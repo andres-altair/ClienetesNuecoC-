@@ -18,6 +18,8 @@ namespace ClientesNuevosC_
         public static void Main(string[] args)
         {
             menuI mI = new menuC();
+            clienteA cA = new clienteA();
+            pedirI pI = new pedirC();
             int elegida = mI.menuCl();
             bool cerrarMenu = false;    
             while (!cerrarMenu)
@@ -28,8 +30,13 @@ namespace ClientesNuevosC_
                         cerrarMenu = true;  
                         break;
                     case 1:
-                        listadto.Add();
-                        
+                        Console.WriteLine("escribe tu apellido");
+                        pI.pedirApellido();
+                            break;
+                    case 2:
+                        Console.WriteLine("");
+
+
 
 
 
