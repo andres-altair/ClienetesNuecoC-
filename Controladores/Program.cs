@@ -1,6 +1,7 @@
 ﻿using ClientesNuevosC_;
 using ClientesNuevosC_.Dtos;
 using ClientesNuevosC_.Servicios;
+using System.Timers;
 
 namespace ClientesNuevosC_
 {
@@ -10,7 +11,7 @@ namespace ClientesNuevosC_
     /// </summary>
     class program
     {
-        List<clienteA> listadto = new List<clienteA>();
+        List<ClienteDto> listaDTO = new List<ClienteDto>();
         /// <summary>
         /// clase pricipal 
         /// amd-141123
@@ -18,7 +19,6 @@ namespace ClientesNuevosC_
         public static void Main(string[] args)
         {
             menuI mI = new menuC();
-            clienteA cA = new clienteA();
             pedirI pI = new pedirC();
             int elegida = mI.menuCl();
             bool cerrarMenu = false;    
@@ -31,7 +31,11 @@ namespace ClientesNuevosC_
                         break;
                     case 1:
                         Console.WriteLine("escribe tu apellido");
-                        pI.pedirApellido();
+                        pI.darAltaCliente();
+                        foreach(ClienteDto cliente in listaCliente)
+                        {
+                            Console.WriteLine(cliente.ToString);
+                        }
                             break;
                     case 2:
                         Console.WriteLine("");
@@ -45,3 +49,6 @@ namespace ClientesNuevosC_
         }
     }
 }
+//dar alta una nueva cuenta bancaria ,
+//tiene que terner un campo que identifique al usuario de esa cuenta bancaria
+//id, isban, codigo switch del banco, a que cliente le pertenece esa cuenta bancaria , fecha alta y baja de la cuenta

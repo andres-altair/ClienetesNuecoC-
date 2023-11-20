@@ -9,7 +9,7 @@ namespace ClientesNuevosC_.Dtos
     /// <summary>
     /// clase que se guarada las listas
     /// </summary>
-    internal class clienteA
+    internal class ClienteDto
     {
         long idCliente;//PK
         private string nombreCliente= "aaaaa";
@@ -21,7 +21,9 @@ namespace ClientesNuevosC_.Dtos
         private string fchAltaCliente = "9999/12/31";
         private string fchBajaCliente = "9999/12/31";
 
+
         //getters y setters
+        public long IdCliente { get => idCliente; set => idCliente = value; }
         public string NombreCliente { get => nombreCliente; set => nombreCliente = value; }
         public string ApellidoCliente { get => apellidoCliente; set => apellidoCliente = value; }
         public string Dni { get => dni; set => dni = value; }
@@ -29,6 +31,9 @@ namespace ClientesNuevosC_.Dtos
         public string EmailCliente { get => emailCliente; set => emailCliente = value; }
         public int TlfCliente { get => tlfCliente; set => tlfCliente = value; }
         public string FchAltaCliente { get => fchAltaCliente; set => fchAltaCliente = value; }
+        public string FchBajaCliente { get => fchBajaCliente; set => fchBajaCliente = value; }
+
+
 
         //constructores(metodo que crea objetos)
         /// <summary>
@@ -42,7 +47,7 @@ namespace ClientesNuevosC_.Dtos
         /// <param name="tlfCliente"></param>
         /// <param name="fchAltaCliente"></param>
         /// <param name="fchBajaCliente"></param>
-        public clienteA(string nombreCliente, string apellidoCliente, string dni, string fechaNaciomientoCliente, string emailCliente, int tlfCliente, string fchAltaCliente, string fchBajaCliente)
+        public ClienteDto(string nombreCliente, string apellidoCliente, string dni, string fechaNaciomientoCliente, string emailCliente, int tlfCliente, string fchAltaCliente, string fchBajaCliente)
         {
             this.nombreCliente = nombreCliente;
             this.apellidoCliente = apellidoCliente;
@@ -56,7 +61,7 @@ namespace ClientesNuevosC_.Dtos
         /// metodo, contructor por defecto
         /// 151123-amd
         /// </summary>
-        public clienteA() { }
+        public ClienteDto() { }
         //ToString
         override
             public string ToString()
